@@ -33,12 +33,24 @@ function addUser(newUser) {
     .catch(error => console.log(error))
 } 
 
+function UpdateUser(){
+    fetch(url)
+    .then(`${url}/1`)
+}
 
 const newUser = {
     name: "Reinaldo Ramos",
-    avatar: "https://i.pinimg.com/originals/bf/f6/74/bff674de999d4313915189b073babadd.jpg",
+    avatar: "https://picsum.photos/200/300",
     city: "Rio do Sul"
 }
+
+const updateUser = {
+    name: "Emely",
+    avatar:  "https://picsum.photos/200/300",
+    city: "Recife"
+}
+
+
 
 addUser(newUser)
 getUser();
