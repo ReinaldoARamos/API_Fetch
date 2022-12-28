@@ -7,4 +7,14 @@ function getUsers() {
     .catch(error => console.log(error))
 }
 
+function getUser() {
+    fetch(`${url}/1`)
+.then(response => response.json())
+    .then(data => {
+        return renderAPIResult.textContent = JSON.stringify(data.name)
+    })
+    .catch(error => console.log(error))
+}
+
+getUser();
 getUsers();
