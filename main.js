@@ -35,8 +35,18 @@ function addUser(newUser) {
 
 function UpdateUser(){
     fetch(url)
-    .then(`${url}/1`)
+    .then(`${url}/1`, {
+       method: "PUT",
+       body: JSON.stringify(updateUser),
+        headers:{"Content-type" : "application/json; charset=UTF-8"} ,
+        
+    })
+    .then(response => response.json())
+    .then(data => alertAPI.textContent = data)
+    .catch(error => console.log(error))
 }
+
+
 
 const newUser = {
     name: "Reinaldo Ramos",
