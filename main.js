@@ -55,7 +55,7 @@ const newUser = {
 }
 
 const updateUser = {
-    name: "Emely",
+    name: "clovis",
     avatar: "https://picsum.photos/200/300",
     city: "Recife"
 }
@@ -65,4 +65,4 @@ const updateUser = {
 //addUser(newUser)
 getUser();
 getUsers();
-UpdateUsers(updateUser)
+UpdateUsers(updateUser, 3)
