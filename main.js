@@ -33,9 +33,9 @@ function addUser(newUser) {
     .catch(error => console.log(error))
 } 
 
-function UpdateUsers(updateUser){
+function UpdateUsers(updateUser, id){
     
-    fetch(`${url}/1`, {
+    fetch(`${url}/${id}`, {
        method: "PUT",
        body: JSON.stringify(updateUser),
         headers:{"Content-type" : "application/json; charset=UTF-8"} ,
@@ -45,6 +45,20 @@ function UpdateUsers(updateUser){
     .then(data => alertAPI.textContent = data)
     .catch(error => console.log(error))
 }
+
+function DeleteUser(id){
+    
+    fetch(`${url}/${id}`, {
+       method: "DELETE",
+       body: JSON.stringify(updateUser),
+        headers:{"Content-type" : "application/json; charset=UTF-8"} ,
+        
+    })
+    .then(response => response.json())
+    .then(data => alertAPI.textContent = data)
+    .catch(error => console.log(error))
+}
+
 
 
 
@@ -64,5 +78,6 @@ const updateUser = {
 
 //addUser(newUser)
 getUser();
+DeleteUser(3);
 getUsers();
-UpdateUsers(updateUser, 3)
+//UpdateUsers(updateUser, 3)
