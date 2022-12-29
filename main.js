@@ -33,9 +33,9 @@ function addUser(newUser) {
     .catch(error => console.log(error))
 } 
 
-function UpdateUser(){
-    fetch(url)
-    .then(`${url}/1`, {
+function UpdateUsers(updateUser){
+    
+    fetch(`${url}/1`, {
        method: "PUT",
        body: JSON.stringify(updateUser),
         headers:{"Content-type" : "application/json; charset=UTF-8"} ,
@@ -56,12 +56,13 @@ const newUser = {
 
 const updateUser = {
     name: "Emely",
-    avatar:  "https://picsum.photos/200/300",
+    avatar: "https://picsum.photos/200/300",
     city: "Recife"
 }
 
 
 
-addUser(newUser)
+//addUser(newUser)
 getUser();
 getUsers();
+UpdateUsers(updateUser)
